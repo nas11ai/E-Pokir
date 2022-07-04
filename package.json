@@ -1,0 +1,30 @@
+{
+  "name": "e-pokir",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "migration:down": "node utils/rollback.js",
+    "db:info": "heroku config -a warm-beyond-39890",
+    "db:start": "heroku run psql -h ec2-54-159-22-90.compute-1.amazonaws.com -p 5432 -U tayxqikzlgdvbn 4mrkb5ragu9d1 -a warm-beyond-39890"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fast-csv": "^4.3.6",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.7.3",
+    "sequelize": "^6.21.0",
+    "umzug": "^3.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}
